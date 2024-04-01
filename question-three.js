@@ -4,6 +4,7 @@ const readline = require('readline').createInterface({
 })
 
 const isPrime = num => {
+  if(isNaN(num)) return false
   if(num <= 1) return false
   if(num === 2 || num === 3) return true
   if(num % 2 === 0 || num % 3 === 0) return false
