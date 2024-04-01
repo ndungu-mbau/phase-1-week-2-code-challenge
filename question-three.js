@@ -9,12 +9,11 @@ const isPrime = num => {
   return true
 }
 
-const res = [
-  isPrime(2),
-  isPrime(5),
-  isPrime(8),
-  isPrime(9),
-  isPrime(7)
-].join('\n')
+const arePrime = arr => {
+  return arr.filter(isPrime)
+}
+
+const arr = [2, 3, 5, 7, 9, 10, 11, 19, 15, 17]
+const res = arePrime(arr)
 
 console.log(res)
