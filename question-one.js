@@ -1,8 +1,3 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-
 const checkAndChangeCaseChar = (char) => {
   if(char === ' ') return ' '
   if(char === char.toUpperCase()) {
@@ -19,8 +14,4 @@ const checkAndChangeCaseStr = (str) => {
     .join('')
 }
 
-// console.log(checkAndChangeCaseStr('Hello World'))
-readline.question('Enter a string: ', (str) => {
-  console.log(checkAndChangeCaseStr(str))
-  readline.close()  
-})
+console.log(checkAndChangeCaseStr('Hello World'))

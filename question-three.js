@@ -1,8 +1,3 @@
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-
 const isPrime = num => {
   if(isNaN(num)) return false
   if(num <= 1) return false
@@ -19,7 +14,4 @@ const arePrime = arr => {
   return arr.filter(isPrime)
 }
 
-readline.question('Enter a range of numbers, separating each with a comma (,): ', (nums) => {
-  console.log(arePrime(nums.split(',').map(Number)))
-  readline.close()
-})
+console.log(arePrime([2,3,4,5,6,7,8,9,15.17]))
